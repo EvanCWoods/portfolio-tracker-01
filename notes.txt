@@ -1,0 +1,16 @@
+Components:
+
+- Button to create a position:
+    * add a new div box to the section containing them.
+    * on page load parse through the local storage and recreate the boxes for each position.
+    * push new positions to the total position section.
+
+- Total position section:
+    * Get the sum of the positions stored in local storage and update on new position creation.
+
+- Each position div:
+    * position title
+    * position value
+    * units
+    * price per unit
+    * Change and remove buttons
