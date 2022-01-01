@@ -46,6 +46,10 @@ button:hover {
     color: white
 }
 
+#new-position-form-section {
+    display: none;
+}
+
 #new-position-form {
     margin-top: 5%;
     background:rgb(50, 50, 230);
