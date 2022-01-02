@@ -73,3 +73,36 @@ button:hover {
     border: none;
     background: white;
 }
+
+#positions-container-section {
+    display: inline-flex;
+    overflow: wrap;
+    justify-content: center;
+}
+.position-container {
+    width: 30%;
+    height: auto;
+    background: grey;
+}
+.position-title-container,
+.position-value-container {
+    display: flex;
+    justify-content: center;
+}
+.position-value, .position-units {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.position-remove-append-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+.position-remove,
+.position-append {
+    border: none;
+    border-radius: 5px;
+    padding: 1%;
+}

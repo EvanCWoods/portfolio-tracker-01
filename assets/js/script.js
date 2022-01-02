@@ -1,9 +1,11 @@
+let totalValueElement = document.getElementById("total-value");
 let addPositionButton = document.getElementById("add-position-button");
 let newPositionFormSection = document.getElementById("new-position-form-section");
 let submitPositionButton = document.getElementById("submit-new-position-button");
 
 let newPositionDetailsList = [];
 let getPositionDetailsList = [];
+let sumValue = 0;
 
 // Function to handle the form for new position entries
 let setPositionDetails = () => {
@@ -40,12 +42,17 @@ let getPositionDetails = () => {
 
 // Main function to execute all logic
 let main = () => {
+    totalValueElement.value = 0;
     // Event listener to show the form 
     addPositionButton.addEventListener("click", () => {
         newPositionFormSection.style.display = "block";
     });
     setPositionDetails();
     getPositionDetails();
+    for (let i=0; i<getPositionDetailsList.length; i++) {
+        sumValue += getPositionDetailsList[i].totalValue;
+    }
+    totalValueElement.textContent = "Total Value $" + sumValue;
 }
 
 main();
