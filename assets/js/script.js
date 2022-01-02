@@ -2,6 +2,7 @@ let totalValueElement = document.getElementById("total-value");
 let addPositionButton = document.getElementById("add-position-button");
 let newPositionFormSection = document.getElementById("new-position-form-section");
 let submitPositionButton = document.getElementById("submit-new-position-button");
+let positionsContainerSection = document.getElementById("positions-container-section");
 
 let newPositionDetailsList = [];
 let getPositionDetailsList = [];
@@ -31,6 +32,17 @@ let setPositionDetails = () => {
     });
 }
 
+let createPositionCard = () => {
+    let positionContainer = document.createElement("div");
+    positionContainer.classList.add("position-container");
+    positionsContainerSection.appendChild(positionContainer);
+
+    let positionTitleContainer = document.createElement("div");
+    positionTitleContainer.classList.add("position-title-container");
+    document.getElementById("position-container").appendChild(positionTitleContainer);
+}
+
+
 // Function to handle the gettign of data from local storage
 let getPositionDetails = () => {
     for (let i=0; i<localStorage.length; i++) {
@@ -55,4 +67,6 @@ let main = () => {
     totalValueElement.textContent = "Total Value $" + sumValue;
 }
 
+
+createPositionCard();
 main();

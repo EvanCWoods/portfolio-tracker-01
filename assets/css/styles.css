@@ -43,11 +43,13 @@ button:hover {
     border-radius: 5px;
     background: rgb(50, 50, 230);
     border: none;
-    color: white
+    color: white;
+    margin-bottom: 3%;
 }
 
 #new-position-form-section {
     display: none;
+    margin-bottom: 5%;
 }
 
 #new-position-form {
